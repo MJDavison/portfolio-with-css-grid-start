@@ -1,8 +1,8 @@
 @use '../modules' as m;
 
-.about{
-    @extend %container;
-    @extend %clearfix;
+.about{    
+    @include m.mixin-container();
+    @include m.mixin-clearfix();
     margin-top: 3em;
 
     &__image{

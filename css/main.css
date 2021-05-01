@@ -1,16 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Six+Caps&display=swap");
-.about {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 50em;
-}
-
-.about::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -502,7 +490,15 @@ h2 {
 }
 
 .about {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 50em;
   margin-top: 3em;
+}
+.about::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .about__image {
   max-height: 25em;
