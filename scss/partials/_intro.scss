@@ -1,0 +1,50 @@
+@use '../modules' as m;
+
+.intro{
+    display: flex;
+    color: rgba(m.$c-white, 0.7);
+
+    h2 {
+        color: m.$c-white;
+
+        &::after{
+            width: 20%;
+            content:'';
+            height: 1px;
+            background: rgba(m.$c-white, 0.5);
+            display: block;
+            margin: 1em auto 0;
+        }
+    }
+
+    @supports (display:grid){
+        display: grid;
+        grid-template-columns: minmax(4em, 1fr) minmax(auto, 30em) minmax(4em, 1fr);
+    }
+    &--middle{
+        background: m.$c-dark_blue ;
+        padding: 2.5em 5vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    &--left img,
+    &--right img{
+        object-fit: cover;        
+        min-height: 100%;
+        min-width: 100%;
+        display: block;
+    }
+    &--left img{
+        object-position: right;
+
+    }
+
+    
+
+    &--right img{
+        object-position: left;
+    }
+}

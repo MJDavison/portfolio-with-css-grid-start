@@ -1,5 +1,8 @@
 @use '../modules' as m;
 
+img{
+    max-width: 100%;
+}
 body{
     color: m.$c-grey;
     font-family: m.$f-ff-s;
@@ -17,10 +20,7 @@ h1{
     line-height: 1;
     font-size: 3.125rem;
 
-    span{        
-        display: block;        
-        @include m.f-sans-serif($fs:5.5rem, $color:m.$c-accent);              
-    }
+    
 }
 
 h2{
