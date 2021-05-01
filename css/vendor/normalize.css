@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Six+Caps&display=swap");
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -374,41 +373,4 @@ template {
   display: none;
 }
 
-body {
-  color: #A7A7A7;
-  font-family: "Merriweather", serif;
-  line-height: 1.6;
-  background: #FFFFFF;
-  font-size: 0.875rem;
-}
-
-h1, h2, p {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-h1 {
-  color: #03AFC2;
-  line-height: 1;
-  font-size: 3.125rem;
-}
-h1 span {
-  display: block;
-  font-size: 5.5rem;
-  letter-spacing: 0.3em;
-  color: #03AFC2;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: "Six Caps", sans-serif;
-}
-
-h2 {
-  font-size: 2rem;
-  letter-spacing: 0.3em;
-  color: #A7A7A7;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: "Six Caps", sans-serif;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=normalize.css.map */

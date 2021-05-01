@@ -1,0 +1,32 @@
+@use '../modules' as m;
+
+body{
+    color: m.$c-grey;
+    font-family: m.$f-ff-s;
+    line-height: 1.6;
+    background: m.$c-white;
+    font-size: .875rem;
+}
+h1,h2,p{
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+h1{
+    color: m.$c-accent;    
+    line-height: 1;
+    font-size: 3.125rem;
+
+    span{        
+        display: block;        
+        @include m.f-sans-serif($fs:5.5rem, $color:m.$c-accent);              
+    }
+}
+
+h2{
+    @include m.f-sans-serif($fs:2rem);    
+}
+
+p{
+    
+}

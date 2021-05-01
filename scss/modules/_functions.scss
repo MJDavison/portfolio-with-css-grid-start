@@ -1,0 +1,9 @@
+@function path($path, $variable){
+    $value: "";
+@if $path == 'color' { 
+    $value: 'modules.$color-$variable'
+}
+
+
+@return $value;
+}
