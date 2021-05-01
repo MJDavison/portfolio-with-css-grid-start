@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Six+Caps&display=swap");
+.about {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+.about::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -400,7 +412,7 @@ h1 {
 h2 {
   font-size: 2rem;
   letter-spacing: 0.15em;
-  color: #A7A7A7;
+  color: #606060;
   text-transform: uppercase;
   line-height: 1;
   font-family: "Six Caps", sans-serif;
@@ -487,6 +499,43 @@ h2 {
 }
 .intro--right img {
   object-position: left;
+}
+
+.about {
+  margin-top: 3em;
+}
+.about__image {
+  max-height: 25em;
+}
+@media (min-width: 42em) {
+  .about__image {
+    float: left;
+  }
+}
+.about__title {
+  margin-bottom: 0.5em;
+}
+.about__subtitle {
+  margin: 0.5em 0;
+}
+
+@supports (display: grid) {
+  .about {
+    display: grid;
+    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] minmax(12em, 2fr) [port-end];
+  }
+  .about__image {
+    grid-column: port-start/img-end;
+    grid-row: 1/2;
+  }
+  .about__title {
+    grid-column: name-start/port-end;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .about__subtitle, .about__text {
+    grid-column: port-start/port-end;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

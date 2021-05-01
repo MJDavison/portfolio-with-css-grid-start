@@ -1,0 +1,48 @@
+@use '../modules' as m;
+
+.about{
+    @extend %container;
+    @extend %clearfix;
+    margin-top: 3em;
+
+    &__image{
+        max-height: 25em;
+        @media (min-width: 42em) {
+            float: left;    
+        }
+        
+    }
+
+    &__title{
+        margin-bottom: .5em ;
+    }
+
+    &__subtitle{
+        margin: 0.5em 0;
+        
+    }
+}
+
+@supports(display:grid){
+    .about{
+        display:grid;
+        grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em,1fr) [img-end] minmax(12em, 2fr) [port-end];
+        
+        &__image{
+            grid-column: port-start / img-end;
+            grid-row: 1 / 2;
+        }
+    
+        &__title{
+            grid-column: name-start / port-end;
+            grid-row: 1 / 2;
+            align-self: end;
+           
+        }
+    
+        &__subtitle,
+        &__text{
+            grid-column: port-start / port-end;
+        }    
+    }    
+}
