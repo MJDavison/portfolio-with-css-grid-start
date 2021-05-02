@@ -1,0 +1,42 @@
+@use '../modules' as m;
+
+.contact{
+    @include m.mixin-container();
+    padding: 5em 0;
+    
+    h1{
+        text-align: center;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+label {
+    display: block;
+    margin-top: 1em;
+    color: m.$c-dark-grey;
+}
+
+input, textarea{
+    box-sizing: border-box;
+    display: block;
+    padding: .75em;
+    width: 100%;
+    background: lighten($color: m.$c-light-grey, $amount: 7%);
+    border: 1px solid m.$c-light-grey;
+    font-size: 1.2rem;
+}
+
+.button{
+    display: line-block;
+    width: auto;
+    margin-top: 1em;
+    margin-left: auto;
+    background: m.$c-accent;
+    border: none;    
+    @include m.f-sans-serif($fs:2.5rem, $color: m.$c-white);
+    padding: .5em 1.5em;
+
+}
