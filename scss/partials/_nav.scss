@@ -1,0 +1,54 @@
+@use '../modules' as m;
+.menu-button{
+    position: absolute;
+    top: 3em;
+    left: 3em;
+    background: transparent;
+    border: 0;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: stretch;
+    // @supports(justify-content:space-between){
+    //     justify-content: space-evenly;
+        
+    // }
+    background:m.$c-accent;
+    
+}
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 10%;
+    z-index: 10;
+}
+
+nav li{
+    border-bottom: 1px solid m.$c-dark_blue;
+    text-align: center;
+
+    
+    
+}
+
+nav li:hover{
+    background: rgba($color: m.$c-dark_blue, $alpha:0.5)
+}
+
+nav a{
+    display: inline-block;
+    @include m.f-sans-serif($fs:4rem, $color: m.$c-dark_blue);
+    text-decoration:none;
+    padding: calc(100vh/8) 0;
+    width: 100%;
+    line-height: 0;    
+}
