@@ -9,7 +9,12 @@ body{
     line-height: 1.6;
     background: m.$c-white;
     font-size: .875rem;
+
+    @include m.mixin-mq(){
+        font-size: 1.125rem;  
+    }
 }
+
 h1,h2,p{
     margin-top: 0;
     margin-bottom: 1em;
@@ -19,12 +24,20 @@ h1{
     color: m.$c-accent;    
     line-height: 1;
     font-size: 3.125rem;
-
+    
+    @include m.mixin-mq(){
+        
+        font-size: 4.25rem;
+    } 
     
 }
 
 h2{
-    @include m.f-sans-serif($fs:2rem);    
+    @include m.f-sans-serif($fs:2rem); 
+
+    @include m.mixin-mq(){        
+        font-size: 3rem;
+    }   
 }
 
 p{

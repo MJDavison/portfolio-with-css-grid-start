@@ -385,6 +385,11 @@ body {
   background: #FFFFFF;
   font-size: 0.875rem;
 }
+@media (min-width: 50em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
 
 h1, h2, p {
   margin-top: 0;
@@ -396,6 +401,11 @@ h1 {
   line-height: 1;
   font-size: 3.125rem;
 }
+@media (min-width: 50em) {
+  h1 {
+    font-size: 4.25rem;
+  }
+}
 
 h2 {
   font-size: 2rem;
@@ -405,6 +415,11 @@ h2 {
   line-height: 1;
   font-family: "Six Caps", sans-serif;
   font-weight: 400;
+}
+@media (min-width: 50em) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 .welcome {
@@ -423,6 +438,11 @@ h2 {
   line-height: 2;
   text-align: center;
 }
+@media (min-width: 50em) {
+  .welcome h1 {
+    font-size: 3vw;
+  }
+}
 .welcome h1 span {
   display: block;
   font-size: 5.5rem;
@@ -432,6 +452,11 @@ h2 {
   line-height: 1;
   font-family: "Six Caps", sans-serif;
   font-weight: 400;
+}
+@media (min-width: 50em) {
+  .welcome h1 span {
+    font-size: 10vw;
+  }
 }
 .welcome h1::before, .welcome h1::after {
   display: block;
@@ -504,7 +529,7 @@ h2 {
 .about__image {
   max-height: 25em;
 }
-@media (min-width: 42em) {
+@media (max-width: 42em) {
   .about__image {
     float: left;
   }
@@ -520,18 +545,34 @@ h2 {
   .about {
     display: grid;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] minmax(12em, 2fr) [port-end];
+    column-gap: 0.5em;
   }
   .about__image {
     grid-column: port-start/img-end;
     grid-row: 1/2;
+  }
+  @media (min-width: 50em) {
+    .about__image {
+      grid-row: 1/4;
+    }
   }
   .about__title {
     grid-column: name-start/port-end;
     grid-row: 1/2;
     align-self: end;
   }
+  @media (min-width: 50em) {
+    .about__title {
+      max-width: 10vw;
+    }
+  }
   .about__subtitle, .about__text {
     grid-column: port-start/port-end;
+  }
+  @media (min-width: 50em) {
+    .about__subtitle, .about__text {
+      grid-column: img-end/port-end;
+    }
   }
 }
 .portfolio {
@@ -598,7 +639,11 @@ h2 {
 @supports (display: grid) {
   .portfolio__items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 50em) {
+    .portfolio__items {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   .portfolio__item.featured {
@@ -626,6 +671,31 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
+}
+@supports (display: grid) {
+  @media (min-width: 50em) {
+    form {
+      display: grid;
+      column-gap: 1em;
+      grid-template-areas: "name email" "message message" " . button";
+    }
+    form .name {
+      grid-area: name;
+    }
+    form .email {
+      grid-area: email;
+    }
+    form .message {
+      grid-area: message;
+    }
+    form .message textarea {
+      min-height: 10em;
+      resize: vertical;
+    }
+    form .button {
+      grid-area: button;
+    }
+  }
 }
 
 label {

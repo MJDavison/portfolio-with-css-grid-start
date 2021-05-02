@@ -8,10 +8,9 @@
 
     &__image{
         max-height: 25em;
-        @media (min-width: 42em) {
-            float: left;    
+        @media (max-width:42em){
+            float: left;
         }
-        
     }
 
     &__title{
@@ -28,22 +27,34 @@
     .about{
         display:grid;
         grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em,1fr) [img-end] minmax(12em, 2fr) [port-end];
-        
+        column-gap: .5em;
         &__image{
             grid-column: port-start / img-end;
             grid-row: 1 / 2;
+
+            @include m.mixin-mq(){
+                grid-row: 1/4;
+            }
         }
     
         &__title{
             grid-column: name-start / port-end;
             grid-row: 1 / 2;
             align-self: end;
+            @include m.mixin-mq(){
+                max-width: 10vw;
+            }
+            
            
         }
     
         &__subtitle,
         &__text{
             grid-column: port-start / port-end;
+
+            @include m.mixin-mq(){
+                grid-column: img-end / port-end;
+            }
         }    
     }    
 }
