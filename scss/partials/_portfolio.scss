@@ -1,0 +1,96 @@
+@use '../modules' as m;
+.portfolio {
+  text-align: center;
+  background: m.$c-light-grey;
+  padding: 5em 0;
+
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    @include m.mixin-container($max-width: 75em);
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 20rem;
+
+    &--image {
+      display: block;
+      width: 100%;
+    }
+
+    figcaption {
+      position: absolute;
+      top: 100%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 1em;
+      background: rgba(m.$c-accent, 0.5);
+      color: m.$c-white;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      transition: top ease-in-out 250ms;
+    }
+
+    &:hover figcaption,
+    &:focus figcaption {
+      top: 0;
+    }
+    &--title {
+      color: m.$c-white;
+      font-size: 2.5rem;
+      margin-bottom: auto;
+
+      
+    }
+
+    &--description {
+        display: none;
+
+        
+    }
+
+    &--link {
+      color: m.$c-white;
+      font-weight: m.$f-fw-b;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-bottom: 3px solid;
+      align-self: flex-start;
+
+      &::after {
+        content: url(../img/arrow-white.svg);
+        display: inline-block;
+        width: 0.8em;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
+
+@supports (display: grid) {
+  .portfolio__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+
+  .portfolio__item.featured {
+    
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      
+  }
+
+  .featured{
+    .portfolio__item--title{
+      font-size: 5rem;
+    }
+    .portfolio__item--description{
+      display: block;
+    }
+  }
+}
