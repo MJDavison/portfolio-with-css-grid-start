@@ -1,146 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Joe Portfolio</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-
-  <nav>
-    <ul>
-      <li><a href="#home">home</a></li>
-      <li><a href="#about">about</a></li>
-      <li><a href="#portfolio">portfolio</a></li>
-      <li><a href="#contact">contact</a></li>
-  </ul>
-</nav>
-
-  <div class="welcome">
-    <button class="menu-button">
-      <svg class="hamburger" x="0px" y="0px"
-          viewBox="0 0 30 17" height="17" width="30" >
-            <g transform="translate(-15 -15)">
-              <rect x="15" y="16" class="st0" width="30" height="2"/>
-            </g>
-            <g transform="translate(-15 -9)">
-              <rect x="15" y="16" class="st0" width="30" height="2"/>
-            </g>
-            <g transform="translate(-15 -3)">
-              <rect x="15" y="16" class="st0" width="30" height="2"/>
-            </g>
-          </svg>           
-    </button>
-    <h1>Welcome to my<span>Portfolio</span></h1>
-  </div>
-
-  <section class="intro">
-    <div class="intro--left">
-      <img src="img/welcome-01.png" alt="a laptop on a wood table">
-    </div>
-    <div class="intro--middle">
-      <h2>Making it happen</h2>
-      <p>Enim, mattis donec eu donec diam egestas nisl at enim odio non aliquam eget velit ac augue purus ac et etiam nunc eu id tincidunt senectus arcu proin enim at</p>
-    </div>
-    <div class="intro--right">
-      <img src="img/welcome-02.png" alt="Two computers and a laptop on a table">
-    </div>
-  </section>
-
-  <section class="about">
-    <img class="about__image" src="img/joe-portfolio.png" alt="A picture of Joe">
-    <h1 class="about__title">Joe Portfolio</h1>
-    <h2 class="about__subtitle">Designer & Developer</h2>
-    <div class="about__text">
-      <p>Nisi nisi, tincidunt pellentesque nisi, neque in sed ut fames. Pulvinar ut nisl congue volutpat. Pellentesque mauris dapibus at id euismod sed nisl risus. Eu tortor, diam amet, magna malesuada. Sagittis dapibus vitae auctor ultricies blandit massa arcu. Rutrum faucibus consectetur massa massa maecenas pretium, a diam nulla. Ipsum sed pulvinar amet scelerisque in nec ipsum elit consequat. Feugiat venenatis, in sagittis in accumsan tincidunt. Nec, habitant imperdiet pretium amet in at.</p>
-      <p>Vivamus aenean egestas metus ullamcorper sit. Senectus turpis id sit aliquet viverra suspendisse. Nunc sit maecenas molestie molestie mattis. Id sed non est lectus mauris congue accumsan. Faucibus eget tortor enim, elit semper duis amet in lectus. Faucibus morbi purus cras euismod. Mauris nec duis libero, sollicitudin faucibus feugiat in. Tortor magna venenatis fermentum urna purus, risus tortor. Varius imperdiet posuere euismod nunc.</p>
-    </div>
-  </section>
-  <section class="portfolio">
-    <h1>My Work</h1>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Joe Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container-nav">
       
-      <div class="portfolio__items">
+      <nav>        
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>    
+    </div>
 
+    
+    <div class="welcome">      
+      <button class="menu-button">
+        <svg class="hamburger" x="0px" y="0px"
+          viewBox="0 0 30 17" height="17" width="30">
+          <g transform="translate(-15 -15)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+          <g transform="translate(-15 -9)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+          <g transform="translate(-15 -3)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+        </svg>
+      </button>
+      <h1>Welcome to my<span>Portfolio</span></h1>
+    </div>
+
+    <section class="intro">
+      <div class="intro--left">
+        <img src="img/welcome-01.png" alt="a laptop on a wood table" />
+      </div>
+      <div class="intro--middle">
+        
+        <h2>Making it happen</h2>
+        <p>
+          Enim, mattis donec eu donec diam egestas nisl at enim odio non aliquam
+          eget velit ac augue purus ac et etiam nunc eu id tincidunt senectus
+          arcu proin enim at
+        </p>
+      </div>
+      <div class="intro--right">
+        <img
+          src="img/welcome-02.png"
+          alt="Two computers and a laptop on a table"
+        />
+      </div>
+    </section>
+
+    <section class="about">
+      <img
+        class="about__image"
+        src="img/joe-portfolio.png"
+        alt="A picture of Joe"
+      />
+      <h1 class="about__title">Joe Portfolio</h1>
+      <h2 class="about__subtitle">Designer & Developer</h2>
+      <div class="about__text">
+        <p>
+          Nisi nisi, tincidunt pellentesque nisi, neque in sed ut fames.
+          Pulvinar ut nisl congue volutpat. Pellentesque mauris dapibus at id
+          euismod sed nisl risus. Eu tortor, diam amet, magna malesuada.
+          Sagittis dapibus vitae auctor ultricies blandit massa arcu. Rutrum
+          faucibus consectetur massa massa maecenas pretium, a diam nulla. Ipsum
+          sed pulvinar amet scelerisque in nec ipsum elit consequat. Feugiat
+          venenatis, in sagittis in accumsan tincidunt. Nec, habitant imperdiet
+          pretium amet in at.
+        </p>
+        <p>
+          Vivamus aenean egestas metus ullamcorper sit. Senectus turpis id sit
+          aliquet viverra suspendisse. Nunc sit maecenas molestie molestie
+          mattis. Id sed non est lectus mauris congue accumsan. Faucibus eget
+          tortor enim, elit semper duis amet in lectus. Faucibus morbi purus
+          cras euismod. Mauris nec duis libero, sollicitudin faucibus feugiat
+          in. Tortor magna venenatis fermentum urna purus, risus tortor. Varius
+          imperdiet posuere euismod nunc.
+        </p>
+      </div>
+    </section>
+    <section class="portfolio">
+      <h1>My Work</h1>
+
+      <div class="portfolio__items">
         <!-- Portfolio Item 1 -->
         <figure class="portfolio__item featured">
-          <img class="portfolio__item--image" src="img/portfolio-01.jpg" alt="portfolio item">
+          <img
+            class="portfolio__item--image"
+            src="img/portfolio-01.jpg"
+            alt="portfolio item"
+          />
           <figcaption>
             <h2 class="portfolio__item--title">Project Name</h2>
-            <p class="portfolio__item--description">A short project description could go right here</p>
+            <p class="portfolio__item--description">
+              A short project description could go right here
+            </p>
             <a href="#" class="portfolio__item--link">More Info</a>
           </figcaption>
         </figure>
         <!-- Portfolio Item 2 -->
         <figure class="portfolio__item">
-          <img class="portfolio__item--image" src="img/portfolio-02.jpg" alt="portfolio item">
+          <img
+            class="portfolio__item--image"
+            src="img/portfolio-02.jpg"
+            alt="portfolio item"
+          />
           <figcaption>
             <h2 class="portfolio__item--title">Project Name</h2>
-            <p class="portfolio__item--description">A short project description could go right here</p>
+            <p class="portfolio__item--description">
+              A short project description could go right here
+            </p>
             <a href="#" class="portfolio__item--link">More Info</a>
           </figcaption>
         </figure>
         <!-- Portfolio Item 3 -->
         <figure class="portfolio__item">
-          <img class="portfolio__item--image" src="img/portfolio-03.jpg" alt="portfolio item">
+          <img
+            class="portfolio__item--image"
+            src="img/portfolio-03.jpg"
+            alt="portfolio item"
+          />
           <figcaption>
             <h2 class="portfolio__item--title">Project Name</h2>
-            <p class="portfolio__item--description">A short project description could go right here</p>
+            <p class="portfolio__item--description">
+              A short project description could go right here
+            </p>
             <a href="#" class="portfolio__item--link">More Info</a>
           </figcaption>
         </figure>
         <!-- Portfolio Item 4 -->
         <figure class="portfolio__item">
-          <img class="portfolio__item--image" src="img/portfolio-04.jpg" alt="portfolio item">
+          <img
+            class="portfolio__item--image"
+            src="img/portfolio-04.jpg"
+            alt="portfolio item"
+          />
           <figcaption>
             <h2 class="portfolio__item--title">Project Name</h2>
-            <p class="portfolio__item--description">A short project description could go right here</p>
+            <p class="portfolio__item--description">
+              A short project description could go right here
+            </p>
             <a href="#" class="portfolio__item--link">More Info</a>
           </figcaption>
         </figure>
         <!-- Portfolio Item 5 -->
         <figure class="portfolio__item">
-          <img class="portfolio__item--image" src="img/portfolio-05.jpg" alt="portfolio item">
+          <img
+            class="portfolio__item--image"
+            src="img/portfolio-05.jpg"
+            alt="portfolio item"
+          />
           <figcaption>
             <h2 class="portfolio__item--title">Project Name</h2>
-            <p class="portfolio__item--description">A short project description could go right here</p>
+            <p class="portfolio__item--description">
+              A short project description could go right here
+            </p>
             <a href="#" class="portfolio__item--link">More Info</a>
           </figcaption>
         </figure>
       </div>
-  </section>
+    </section>
 
-  <section class="contact">
-    <h1>Contact Me</h1>
-    <form action="">
-      <label class="name">Name:
-        <input type="text" id="name">
-      </label>
-      
+    <section class="contact">
+      <h1>Contact Me</h1>
+      <form action="">
+        <label class="name"
+          >Name:
+          <input type="text" id="name" />
+        </label>
 
-      <label class="email">Email:
-        <input type="text" id="email">
-      </label>
-      
-      <label class="message">Message:
-        <textarea name="" id="message"></textarea>
-      </label>
-      
-      <input type="submit"  value="SEND" class="button form-button">
-    </form>
-  </section>
+        <label class="email"
+          >Email:
+          <input type="text" id="email" />
+        </label>
 
-  <footer>
-    <p>Follow me on social media</p>
-    <div class="social-icons">
-      <a class="social-icon" href=""><img  src="img/twitter.svg" alt="twitter icon"></a>
-      <a class="social-icon" href=""><img  src="img/instagram.svg" alt="instagram icon"></a>
-      <a class="social-icon"  href=""><img src="img/github.svg" alt="github icon"></a>
-    </div>
-    <p class="copyright">&copy; Copyright 2021 Joe Portfolio</p>
-  </footer>
+        <label class="message"
+          >Message:
+          <textarea name="" id="message"></textarea>
+        </label>
 
-</body>
+        <input type="submit" value="SEND" class="button form-button" />
+      </form>
+    </section>
+
+    <footer>
+      <p>Follow me on social media</p>
+      <div class="social-icons">
+        <a class="social-icon" href=""
+          ><img src="img/twitter.svg" alt="twitter icon"
+        /></a>
+        <a class="social-icon" href=""
+          ><img src="img/instagram.svg" alt="instagram icon"
+        /></a>
+        <a class="social-icon" href=""
+          ><img src="img/github.svg" alt="github icon"
+        /></a>
+      </div>
+      <p class="copyright">&copy; Copyright 2021 Joe Portfolio</p>
+    </footer>
+    <script src="js/nav.js"></script>
+  </body>
 </html>

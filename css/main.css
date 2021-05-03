@@ -423,11 +423,25 @@ h2 {
 }
 
 .menu-button {
-  position: absolute;
+  position: fixed;
   top: 3em;
   left: 3em;
   background: transparent;
   border: 0;
+  transition: transform ease-in-out 250ms;
+  cursor: pointer;
+  z-index: 10;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: transform ease-out 250ms;
 }
 
 nav ul {
@@ -440,15 +454,6 @@ nav ul {
   justify-content: space-around;
   align-items: stretch;
   background: #03AFC2;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 10%;
-  z-index: 10;
 }
 
 nav li {
@@ -471,8 +476,19 @@ nav a {
   font-weight: 400;
   text-decoration: none;
   padding: calc(100vh/8) 0;
-  width: 100%;
   line-height: 0;
+  width: 100%;
+}
+
+.close-icon {
+  display: none;
+}
+
+.nav-is-open nav {
+  transform: translateX(0);
+}
+.nav-is-open .menu-button {
+  transform: translateX(70vw);
 }
 
 .welcome {

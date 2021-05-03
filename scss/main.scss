@@ -2,12 +2,3 @@
 @use 'vendor/normalize';
 @forward 'partials';
 
-@function path($path, $variable){
-    $value: "";
-@if $path == 'color' { 
-    $value: m.$c-+$variable;
-}
-
-
-@return $value;
-}
