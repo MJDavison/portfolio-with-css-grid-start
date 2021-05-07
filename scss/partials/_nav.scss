@@ -37,8 +37,12 @@ nav ul{
 
 
 nav li{
-    border-bottom: 1px solid m.$c-dark_blue;
+    
     text-align: center;
+
+    &:not(:last-of-type){
+        border-bottom: 1px solid m.$c-dark_blue;
+    }
 
     
     
@@ -65,7 +69,7 @@ nav a{
     nav{
         transform: translateX(0);
     }
-    .menu-button{
-        transform: translateX(70vw);      
+    .menu-button{        
+        transform: translateX(80vw);        
     }
 }
