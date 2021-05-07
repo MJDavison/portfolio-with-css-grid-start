@@ -6,18 +6,18 @@
     margin-top: 5em;
     margin-bottom: 5em;
 
-    &__image{
+    &-image{
         max-height: 25em;
         @media (max-width:42em){
             float: left;
         }
     }
 
-    &__title{
+    &-title{
         margin-bottom: .5em ;
     }
 
-    &__subtitle{
+    &-subtitle{
         margin: 0.5em 0;
         
     }
@@ -28,7 +28,7 @@
         display:grid;
         grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em,1fr) [img-end] minmax(12em, 2fr) [port-end];
         column-gap: .5em;
-        &__image{
+        &-image{
             grid-column: port-start / img-end;
             grid-row: 1 / 2;
 
@@ -37,7 +37,7 @@
             }
         }
     
-        &__title{
+        &-title{
             grid-column: name-start / port-end;
             grid-row: 1 / 2;
             align-self: end;
@@ -48,8 +48,8 @@
            
         }
     
-        &__subtitle,
-        &__text{
+        &-subtitle,
+        &-text{
             grid-column: port-start / port-end;
 
             @include m.mixin-mq(){

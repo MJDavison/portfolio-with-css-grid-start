@@ -2,49 +2,44 @@
 .portfolio {
   text-align: center;
   background: m.$c-light-grey;
-  padding: 5em 0;
+  padding: 5em 0; 
+}
 
-  &__items{
+.portfolio-items{
+  display: flex;
+  flex-wrap: wrap;
+  @include m.mixin-container($max-width: 75em);
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 20rem;
+
+  figcaption {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1em;
+    background: rgba(m.$c-accent, 0.5);
+    color: m.$c-white;
+    text-align: left;
     display: flex;
-    flex-wrap: wrap;
-    @include m.mixin-container($max-width: 75em);
+    flex-direction: column;
+    transition: top ease-in-out 250ms;
   }
 
-  &__item {
-    position: relative;
-    overflow: hidden;
-    flex: 1 1 20rem;
-
-    &--image {
-      display: block;
-      width: 100%;
-    }
-
-    figcaption {
-      position: absolute;
-      top: 100%;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      padding: 1em;
-      background: rgba(m.$c-accent, 0.5);
-      color: m.$c-white;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      transition: top ease-in-out 250ms;
-    }
-
-    &:hover figcaption,
-    &:focus figcaption {
-      top: 0;
-    }
-    
-
-    
-
+  &:hover figcaption,
+  &:focus figcaption {
+    top: 0;
   }
-  
+}
+
+.portfolio-image {
+  display: block;
+  width: 100%;
 }
 
 .portfolio-title {
@@ -74,16 +69,15 @@
 }
 
 @supports (display: grid) {
-  .portfolio__items {
-    display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  .portfolio-items {
+    display: grid;    
     @include m.mixin-mq(){
       grid-template-columns: repeat(4,1fr);
     }
     
   }
 
-  .portfolio__item.featured {
+  .portfolio-item.featured {
     
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
@@ -91,10 +85,10 @@
   }
 
   .featured{
-    .portfolio-title{
+    &.portfolio-title{
       font-size: 5rem;
     }
-    .portfolio-description{
+    &.portfolio-description{
       display: block;
     }
   }
@@ -136,14 +130,25 @@
   text-align: left;
   padding: 5em 0;
   margin-bottom: 2em;
+  background-size: cover;
+  background-position: center;
 
 }
 
-.portfolio-header:nth-of-type(1){
-  background-image: url(../img/portfolio-01.jpg);
-  
-  background-size: cover;
-  background-position: center;
+.header-one{
+  background-image: url(../img/portfolio-01.jpg);    
+}
+.header-two{
+  background-image: url(../img/portfolio-02.jpg);    
+}
+.header-three{
+  background-image: url(../img/portfolio-03.jpg);    
+}
+.header-four{
+  background-image: url(../img/portfolio-04.jpg);    
+}
+.header-five{
+  background-image: url(../img/portfolio-05.jpg);    
 }
 
 .portfolio-title-box{
@@ -196,6 +201,16 @@
     width: 65%;
     float: right;
     margin-left: 2em;
+    
   }
   
+}
+
+@keyframes modalIn{
+  0% { opacity: 0; }
+  100%{ opacity: 1; }
+}
+@keyframes modalOut{
+  0% { opacity: 1; }
+  100%{ opacity: 0; }
 }
